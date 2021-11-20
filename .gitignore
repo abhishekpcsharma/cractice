@@ -1,0 +1,9 @@
+# ignore vim .swp files
+*.swp
+
+# ignore executable
+cractice
+
+# ignore intermediate outputs
+*.o
+
