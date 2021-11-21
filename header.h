@@ -18,3 +18,4 @@ bool _7_is_nth_bit_set(unsigned int num, char bit_position);
 void _8_set_lth_to_rth_bits(unsigned int num, char l, char r);
 void _9_reset_lth_to_rth_bits(unsigned int num, char l, char r);
 void _10_toggle_lth_to_rth_bits(unsigned int num, char l, char r);
+void _11_extract_lth_to_rth_bits(unsigned int num, char l, char r);
