@@ -14,3 +14,4 @@ void _3_decimal_to_binary(unsigned long decimal_num);
 void _4_set_nth_bit(unsigned int num, char bit_position);
 void _5_reset_nth_bit(unsigned int num, char bit_position);
 void _6_toggle_nth_bit(unsigned int num, char bit_position);
+bool _7_is_nth_bit_set(unsigned int num, char bit_position);
