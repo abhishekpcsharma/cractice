@@ -16,3 +16,4 @@ void _5_reset_nth_bit(unsigned int num, char bit_position);
 void _6_toggle_nth_bit(unsigned int num, char bit_position);
 bool _7_is_nth_bit_set(unsigned int num, char bit_position);
 void _8_set_lth_to_rth_bits(unsigned int num, char l, char r);
+void _9_reset_lth_to_rth_bits(unsigned int num, char l, char r);
