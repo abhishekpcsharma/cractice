@@ -19,3 +19,4 @@ void _8_set_lth_to_rth_bits(unsigned int num, char l, char r);
 void _9_reset_lth_to_rth_bits(unsigned int num, char l, char r);
 void _10_toggle_lth_to_rth_bits(unsigned int num, char l, char r);
 void _11_extract_lth_to_rth_bits(unsigned int num, char l, char r);
+unsigned int _12_get_min_bit_count_for_number(unsigned int num);

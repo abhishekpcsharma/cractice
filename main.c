@@ -165,6 +165,15 @@ int main (int argc, char *argv[])
 		_11_extract_lth_to_rth_bits(num, l, r);
 		break;
 
+	case 12:
+		if (!are_args_sufficient(argc, 3) || is_arg_negative_num(argv) || is_non_digit_argument(argv, 3)) {
+			return 0;
+		}
+		num = (unsigned int) atoi(*(argv + 2));
+
+		printf("Number of bits required to store number %u is %u\n", num, _12_get_min_bit_count_for_number(num));
+		break;
+
 	default:
 		printf("Invalid argument 2\n");
 		print_help();
@@ -228,10 +237,12 @@ void print_help()
 	printf("8 :	set lth bit to rth bit of a number where l < r\n"
 			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("9 :	reset lth bit to rth bit of a number where l < r\n"
-			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
+			"cmd: ./cractice 9 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("10:	toggle lth bit to rth bit of a number where l < r\n"
-			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
+			"cmd: ./cractice 10 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("11:	extract lth bit to rth bit of a number where l < r\n"
-			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
+			"cmd: ./cractice 11 <unsigned int number> <l bit position> <r bit position>\n");
+	printf("12:	get minimum number of bits required to store a number\n"
+			"cmd: ./cractice 12 <unsigned int number>\n");
 
 }
