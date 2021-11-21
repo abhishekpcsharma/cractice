@@ -7,8 +7,8 @@ void _5_reset_nth_bit(unsigned int num, char bit_position)
 	_3_decimal_to_binary(num);
 
 	num = num & ~(1 << (bit_position - 1));
-	
+
+    printf("Output:\n");
 	_3_decimal_to_binary(num);
-	printf("Output number: %d\n", num);
 	return;
 }

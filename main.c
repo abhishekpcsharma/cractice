@@ -77,6 +77,16 @@ int main (int argc, char *argv[])
 		_5_reset_nth_bit(num, bit_position);
 		break;
 
+	case 6:
+		if (!are_args_sufficient(argc, 4) || is_arg_negative_num(argv) || is_non_digit_argument(argv, 3) || is_non_digit_argument(argv, 4)) {
+			return 0;
+		}
+		num = atoi(*(argv + 2));
+		bit_position = atoi(*(argv + 3));
+
+		_6_toggle_nth_bit(num, bit_position);
+		break;
+
 	default:
 		printf("Invalid argument 2\n");
 		print_help();
@@ -133,5 +143,7 @@ void print_help()
 			"cmd: ./cractice 4 <unsigned int number> <bit position>\n");
 	printf("5 :	reset nth bit of a number\n"
 			"cmd: ./cractice 5 <unsigned int number> <bit position>\n");
+	printf("6 :	toggle nth bit of a number\n"
+			"cmd: ./cractice 6 <unsigned int number> <bit position>\n");
 
 }
