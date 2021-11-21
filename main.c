@@ -6,6 +6,8 @@
 
 int main (int argc, char *argv[])
 {
+	unsigned int num = 0;
+	unsigned int bit_position = 0;
 	if (argc < 2) {
 		printf("Expected atleast 2 arguments\n");
 		print_help();
@@ -59,10 +61,20 @@ int main (int argc, char *argv[])
 		if (!are_args_sufficient(argc, 4) || is_arg_negative_num(argv) || is_non_digit_argument(argv, 3) || is_non_digit_argument(argv, 4)) {
 			return 0;
 		}
-		int num = atoi(*(argv + 2));
-		int bit_position = atoi(*(argv + 3));
+		num = atoi(*(argv + 2));
+		bit_position = atoi(*(argv + 3));
 
 		_4_set_nth_bit(num, bit_position);
+		break;
+
+	case 5:
+		if (!are_args_sufficient(argc, 4) || is_arg_negative_num(argv) || is_non_digit_argument(argv, 3) || is_non_digit_argument(argv, 4)) {
+			return 0;
+		}
+		num = atoi(*(argv + 2));
+		bit_position = atoi(*(argv + 3));
+
+		_5_reset_nth_bit(num, bit_position);
 		break;
 
 	default:
@@ -119,5 +131,7 @@ void print_help()
 			"cmd: ./cractice 3 <unsigned long number>\n");
 	printf("4 :	set nth bit of a number\n"
 			"cmd: ./cractice 4 <unsigned int number> <bit position>\n");
+	printf("5 :	reset nth bit of a number\n"
+			"cmd: ./cractice 5 <unsigned int number> <bit position>\n");
 
 }
