@@ -131,6 +131,23 @@ int main (int argc, char *argv[])
 		_9_reset_lth_to_rth_bits(num, l, r);
 		break;
 
+	case 10:
+		if (!are_args_sufficient(argc, 5) || is_arg_negative_num(argv) || is_non_digit_argument(argv, 3) || is_non_digit_argument(argv, 4) || is_non_digit_argument(argv, 5)) {
+			return 0;
+		}
+		num = (unsigned int) atoi(*(argv + 2));
+		l = (unsigned int) atoi(*(argv + 3));
+		r = (unsigned int) atoi(*(argv + 4));
+
+		if (l > r) {
+			printf("l should be less than or equal to r\n");
+			print_help();
+			return 0;
+		}
+
+		_10_toggle_lth_to_rth_bits(num, l, r);
+		break;
+
 	default:
 		printf("Invalid argument 2\n");
 		print_help();
@@ -194,6 +211,8 @@ void print_help()
 	printf("8 :	set lth bit to rth bit of a number where l < r\n"
 			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("9 :	reset lth bit to rth bit of a number where l < r\n"
+			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
+	printf("10:	toggle lth bit to rth bit of a number where l < r\n"
 			"cmd: ./cractice 8 <unsigned int number> <l bit position> <r bit position>\n");
 
 }
