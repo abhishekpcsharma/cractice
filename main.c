@@ -176,6 +176,13 @@ int main (int argc, char *argv[])
 		printf("Number of bits required to store number %u is %u\n", num, _12_get_min_bit_count_for_number(num));
 		break;
 
+	case 13:
+		if (!are_args_sufficient(argc, 3)) {
+			return 0;
+		}
+		printf("String: %s\nAre all characters in this string unique: %u\n", *(argv + 2), _chars_unique_in_str(*(argv + 2)));
+		break;
+
 	default:
 		printf("Invalid argument 2\n");
 		print_help();
@@ -246,4 +253,6 @@ void print_help()
 			"cmd: ./cractice 11 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("12:	get minimum number of bits required to store a number\n"
 			"cmd: ./cractice 12 <unsigned int number>\n");
+	printf("13:	Are all characters of a string unique\n"
+			"cmd: ./cractice 13 <string>\n");
 }
