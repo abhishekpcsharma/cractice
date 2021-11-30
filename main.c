@@ -28,8 +28,10 @@ int main (int argc, char *argv[])
 		if (!are_args_sufficient(argc, 4)) {
 			return 0;
 		}
+		char *dest = *(argv + 2);
+		char *src = *(argv + 3);
 
-		printf ("Output: %s\n", _2_str_cat(*(argv + 2), *(argv + 3)));
+		printf ("Output: %s\n", _2_str_cat(dest, src));
 		break;
 
 	case 3:
@@ -244,5 +246,4 @@ void print_help()
 			"cmd: ./cractice 11 <unsigned int number> <l bit position> <r bit position>\n");
 	printf("12:	get minimum number of bits required to store a number\n"
 			"cmd: ./cractice 12 <unsigned int number>\n");
-
 }
