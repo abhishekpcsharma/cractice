@@ -21,3 +21,4 @@ void _10_toggle_lth_to_rth_bits(unsigned int num, char l, char r);
 void _11_extract_lth_to_rth_bits(unsigned int num, char l, char r);
 unsigned int _12_get_min_bit_count_for_number(unsigned int num);
 bool _13_chars_unique_in_str(char *str);
+bool _14_is_permutation_of_each_other(char *s, char *t);

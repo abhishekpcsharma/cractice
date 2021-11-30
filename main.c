@@ -183,6 +183,16 @@ int main (int argc, char *argv[])
 		printf("String: %s\nAre all characters in this string unique: %u\n", *(argv + 2), _13_chars_unique_in_str(*(argv + 2)));
 		break;
 
+	case 14:
+		if (!are_args_sufficient(argc, 3)) {
+			return 0;
+		}
+
+		printf("String1: %s\n", *(argv + 2));
+		printf("String2: %s\n", *(argv + 3));
+		printf("Above mentioned 2 strings are permutation of each other : %u\n", _14_is_permutation_of_each_other(*(argv + 2), *(argv + 3)));
+		break;
+
 	default:
 		printf("Invalid argument 2\n");
 		print_help();
@@ -255,4 +265,7 @@ void print_help()
 			"cmd: ./cractice 12 <unsigned int number>\n");
 	printf("13:	Are all characters of a string unique\n"
 			"cmd: ./cractice 13 <string>\n");
+	printf("14:	Are two strings permutation of each other\n"
+			"cmd: ./cractice 14 <string1> <string2>\n");
+
 }
